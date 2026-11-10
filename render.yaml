@@ -1,0 +1,30 @@
+# Blueprint de Render: despliega la API (ciclo del agente + herramientas +
+# SAP simulado) y el front compilado en un solo servicio web.
+#
+# Uso (ver DEPLOY_RENDER.md):
+#   1. Crea una cuenta en render.com con "Sign in with GitHub".
+#   2. New + > Blueprint > selecciona este repositorio.
+#   3. Render detecta este archivo; pedirá GROQ_API_KEY (sync: false = no se
+#      versiona en el repo).
+services:
+  - type: web
+    name: reto-03-andres-ochoa
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22.13.1"
+      - key: GROQ_API_KEY
+        # Valor sensible: se pide en el dashboard de Render, nunca en el repo.
+        sync: false
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-120b
+      - key: MAX_ITERATIONS
+        value: "25"
+      - key: MAX_TOKENS_PER_SESSION
+        value: "120000"

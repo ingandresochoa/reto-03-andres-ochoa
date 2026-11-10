@@ -1,0 +1,35 @@
+name: Keepalive del backend (Render)
+
+# El plan gratuito de Render duerme el servicio tras 15 minutos sin tráfico.
+# Este workflow llama a /api/health cada 10 minutos para mantenerlo despierto.
+# La URL vive en la variable de repositorio BACKEND_URL (no es un secreto:
+# es un endpoint público).
+#
+# Nota: GitHub desactiva los workflows programados si el repositorio no tiene
+# actividad durante 60 días; cualquier push los reactiva.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comprobar que BACKEND_URL está configurada
+        if: ${{ vars.BACKEND_URL == '' }}
+        run: |
+          echo "La variable BACKEND_URL no está configurada; nada que pingear."
+          echo "Configúrala en Settings > Secrets and variables > Actions > Variables."
+
+      - name: Ping a /api/health
+        if: ${{ vars.BACKEND_URL != '' }}
+        run: |
+          url="${{ vars.BACKEND_URL }}/api/health"
+          echo "Ping a $url"
+          codigo=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 120 "$url")
+          echo "HTTP $codigo"
+          if [ "$codigo" != "200" ]; then
+            echo "El backend no respondió 200."
+            exit 1
+          fi
