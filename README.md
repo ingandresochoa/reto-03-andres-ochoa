@@ -153,7 +153,7 @@ Arquitectura en vivo (dos servicios gratuitos, siempre activos):
 > desplegar — ver `DEPLOY_RENDER.md` (5 min).
 >
 > **Link de prueba (GitHub Pages, front estático + API de Render):**
-> <https://andressochoaa.github.io/reto-03-andres-ochoa/>
+> <https://ingandresochoa.github.io/reto-03-andres-ochoa/>
 >
 > **Clave de acceso:** no aplica (el chat no requiere login).
 

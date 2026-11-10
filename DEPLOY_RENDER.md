@@ -35,7 +35,7 @@ permanente. La arquitectura:
    - Value: la URL de Render
 3. **Actions → "Deploy front a GitHub Pages" → Run workflow** para recompilar
    el front con la API conectada.
-4. El front queda en `https://TU-USUARIO.github.io/reto-03-andres-ochoa/`.
+4. El front queda en `https://ingandresochoa.github.io/reto-03-andres-ochoa/`.
 
 > El link principal para la defensa es el de **Render** (front + API en un
 > solo origen). El de Pages es un respaldo estático que siempre está arriba.
