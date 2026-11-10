@@ -10,6 +10,9 @@ crea la orden de compra en un **SAP simulado** con idempotencia por
   compatible con OpenAI), `zod`.
 - **Demo sin clave:** `npm run demo` ejecuta los 6 casos del fixture llamando
   directamente a las herramientas, sin modelo.
+- **En vivo:** <https://reto-03-andres-ochoa.onrender.com> (front + API) ·
+  <https://ingandresochoa.github.io/reto-03-andres-ochoa/> (GitHub Pages)
+- **Repositorio:** <https://github.com/ingandresochoa/reto-03-andres-ochoa>
 
 ---
 

@@ -390,3 +390,9 @@ Resultados esperados de la demo: `4500000001` (sol-001), bloqueo RC1
 (sol-002), bloqueo RC2 (sol-003), `4500000002` (sol-004), `4500000003`
 (sol-005), `4500000004` (sol-006) y `4500000001` idempotente en la segunda
 pasada de sol-001.
+
+Verificación en vivo (sin instalar nada): abre
+<https://reto-03-andres-ochoa.onrender.com> y procesa `sol-002` (bloqueo RC1)
+o `sol-004` (pide confirmación antes de crear). El front estático de
+<https://ingandresochoa.github.io/reto-03-andres-ochoa/> consume la misma API
+de Render.
