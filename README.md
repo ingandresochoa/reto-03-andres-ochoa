@@ -5,7 +5,7 @@ reglas de control **RC1–RC10**, pide confirmación humana cuando hay excepcion
 crea la orden de compra en un **SAP simulado** con idempotencia por
 `solicitud_id`.
 
-- **Reto:** 03 — Órdenes de Compra SAP (Periferia IT Group).
+- **Reto:** 03 — Órdenes de Compra SAP.
 - **Stack:** Node 22 + TypeScript (`tsx`), React + Vite, Express, Groq (API
   compatible con OpenAI), `zod`.
 - **Demo sin clave:** `npm run demo` ejecuta los 6 casos del fixture llamando
