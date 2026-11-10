@@ -10,7 +10,7 @@ permanente. La arquitectura:
   `main`; consume la API de Render vía `VITE_API_URL`.
 - **GitHub Actions (keepalive):** el plan gratuito de Render duerme el servicio
   tras 15 min sin tráfico; el workflow `keepalive.yml` llama a `/api/health`
-  cada 10 min para mantenerlo despierto.
+  cada 5 min para mantenerlo despierto.
 
 ## 1. Crear el servicio en Render (~5 min, una sola vez)
 

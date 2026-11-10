@@ -146,13 +146,13 @@ Arquitectura en vivo (dos servicios gratuitos, siempre activos):
   servicio). Sirve la API y el front compilado **en un solo origen**.
 - **GitHub Pages (front):** construido por Actions en cada push a `main`;
   consume la API de Render.
-- **Keepalive:** el workflow `keepalive.yml` llama a `/api/health` cada 10 min
+- **Keepalive:** el workflow `keepalive.yml` llama a `/api/health` cada 5 min
   para que el plan gratuito de Render no duerma el servicio.
 
-> **Link de prueba (Render, front + API en un origen):** pendiente de
-> desplegar — ver `DEPLOY_RENDER.md` (5 min).
+> **Link principal (Render, front + API en un mismo origen):**
+> <https://reto-03-andres-ochoa.onrender.com>
 >
-> **Link de prueba (GitHub Pages, front estático + API de Render):**
+> **Link de respaldo (GitHub Pages, front estático + API de Render):**
 > <https://ingandresochoa.github.io/reto-03-andres-ochoa/>
 >
 > **Clave de acceso:** no aplica (el chat no requiere login).

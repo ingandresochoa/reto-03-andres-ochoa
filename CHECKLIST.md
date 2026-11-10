@@ -57,7 +57,7 @@ Mapa entre los requisitos del `PRD.md` y la evidencia en el repositorio.
 | `SOLUCION.md` (12 secciones) | Hecho | Ver índice del documento |
 | `modulo/` (bonus) | Hecho | `agent.md`, `tools/oc.ts`, `skill/.../SKILL.md` |
 | Sin `node_modules/`, `out/`, `.env` | Hecho | `.gitignore` y limpieza final |
-| Link público | Hecho | Render (backend, `render.yaml`) + GitHub Pages (front) + keepalive en Actions; ver `DEPLOY_RENDER.md` y README §8 |
+| Link público | Hecho | <https://reto-03-andres-ochoa.onrender.com> (front + API) y <https://ingandresochoa.github.io/reto-03-andres-ochoa/> (Pages); ver README §8 y `DEPLOY_RENDER.md` |
 
 ## Verificación reproducible
 

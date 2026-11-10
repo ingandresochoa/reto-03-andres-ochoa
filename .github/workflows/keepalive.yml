@@ -1,7 +1,7 @@
 name: Keepalive del backend (Render)
 
 # El plan gratuito de Render duerme el servicio tras 15 minutos sin tráfico.
-# Este workflow llama a /api/health cada 10 minutos para mantenerlo despierto.
+# Este workflow llama a /api/health cada 5 minutos para mantenerlo despierto.
 # La URL vive en la variable de repositorio BACKEND_URL (no es un secreto:
 # es un endpoint público).
 #
@@ -9,7 +9,7 @@ name: Keepalive del backend (Render)
 # actividad durante 60 días; cualquier push los reactiva.
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
